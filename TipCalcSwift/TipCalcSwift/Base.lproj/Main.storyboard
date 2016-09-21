@@ -29,7 +29,14 @@
                                         <color key="textColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IGG-RK-PV1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqf-3c-6wX">
+                                        <frame key="frameInset" minX="140" minY="66" width="218" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                        <color key="textColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IGG-RK-PV1">
                                         <frame key="frameInset" minX="13" minY="167" width="349" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,7 +45,12 @@
                                             <segment title="20%"/>
                                             <segment title="25%"/>
                                         </segments>
-                                        <color key="tintColor" red="0.2632183487147382" green="0.22830918505222597" blue="0.46616556186868685" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="segment.layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="updateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="OiY-o8-hxU"/>
                                         </connections>
@@ -84,18 +96,11 @@
                                             <action selector="updateTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Rn-hV-vYG"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svP-BI-a8I">
-                                        <frame key="frameInset" minX="29" minY="72" width="84" height="33"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svP-BI-a8I">
+                                        <frame key="frameInset" minX="17" minY="72" width="103" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                         <color key="textColor" red="0.57254901960000004" green="0.4941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqf-3c-6wX">
-                                        <frame key="frameInset" minX="140" minY="66" width="218" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
-                                        <color key="textColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -105,7 +110,7 @@
                                 <frame key="frameInset" minX="71" minY="82" width="277" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.78000000000000003" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="75"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="75"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="animateValues:" destination="BYZ-38-t0r" eventType="editingChanged" id="Jej-eS-zOd"/>
@@ -113,7 +118,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.5725577920493683" green="0.49473312854585227" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="t78-sq-8lx" appends="YES" id="X36-8S-VeX"/>
@@ -128,9 +133,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bill" destination="vfJ-Wf-Zu3" id="Ole-Co-aNb"/>
+                        <outlet property="payText" destination="svP-BI-a8I" id="F16-fb-6sk"/>
                         <outlet property="resultView" destination="auh-Am-Coi" id="UgW-ms-NQb"/>
+                        <outlet property="settingsBarButton" destination="SXx-fJ-4qJ" id="FZg-C4-Jt9"/>
                         <outlet property="tipLabel" destination="jGh-Fr-9eC" id="LzH-Sh-3fC"/>
                         <outlet property="tipSegments" destination="IGG-RK-PV1" id="ppT-FP-ACd"/>
+                        <outlet property="tipView" destination="8bC-Xf-vdC" id="ZQ1-l0-Udl"/>
                         <outlet property="totalLabel" destination="hqf-3c-6wX" id="5mX-QI-IkL"/>
                     </connections>
                 </viewController>
@@ -155,15 +163,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNQ-G7-xGj">
-                                <frame key="frameInset" minX="82" minY="140" width="214" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNQ-G7-xGj">
+                                <frame key="frameInset" minY="140" width="377" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="29"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qa-SN-cK8">
+                                <frame key="frameInset" minY="280" width="377" height="387"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Scheme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h4-Ty-ycJ">
+                                        <frame key="frameInset" minY="53" width="377" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="34"/>
+                                        <color key="textColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-oS-Iv7">
+                                        <frame key="frameInset" minX="90" minY="132" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="purpleColorScheme:" destination="pdX-2E-ORt" eventType="touchUpInside" id="D9X-OW-poV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-MR-EEf">
+                                        <frame key="frameInset" minX="204" minY="132" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="blackColorScheme:" destination="pdX-2E-ORt" eventType="touchUpInside" id="pT1-jS-sRh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.76148120777027029" colorSpace="calibratedWhite"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="prJ-lT-07k">
-                                <frame key="frameInset" minX="24" minY="244" width="335" height="29"/>
+                                <frame key="frameInset" minX="53" minY="203" width="270" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -171,7 +209,12 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
-                                <color key="tintColor" red="0.26321834869999999" green="0.22830918510000001" blue="0.46616556190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="segment.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changeDefaultTip:" destination="pdX-2E-ORt" eventType="valueChanged" id="fHn-kC-Cr0"/>
                                 </connections>
@@ -180,6 +223,8 @@
                         <color key="backgroundColor" red="0.5725490196078431" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="colorTitle" destination="3h4-Ty-ycJ" id="ow2-bf-WoL"/>
+                        <outlet property="settingsView" destination="SkF-v6-XjF" id="gHs-SC-Kwe"/>
                         <outlet property="tipSegments" destination="prJ-lT-07k" id="zTF-xL-ZdA"/>
                     </connections>
                 </viewController>
